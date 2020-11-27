@@ -7,3 +7,20 @@
 <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
   <mat-icon>delete</mat-icon>
 </button>
+<!-- <button mat-raised-button color="primary" matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+  Action
+</button> -->
+
+<br>
+<p>
+  <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
+</p>
+<br>
+<!-- Auto Complete -->
+<input type="text" placeholder="Pick one" aria-label="Number" #input matInput [matAutocomplete]="auto"
+  (keyup)="onSearch(input.value)">
+<mat-autocomplete #auto="matAutocomplete">
+  <mat-option *ngFor="let item of fillteredArray" [value]="item">
+    {{item}}
+  </mat-option>
+</mat-autocomplete>
