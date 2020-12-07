@@ -24,3 +24,23 @@
     {{item}}
   </mat-option>
 </mat-autocomplete>
+
+<input type="password">
+
+<input type="text">
+
+<mat-chip-list>
+  <mat-chip *ngFor="let item of namesArr">{{item}}</mat-chip>
+</mat-chip-list>
+
+
+<mat-form-field class="example-chip-list">
+  <mat-chip-list #chipList>
+    <mat-chip *ngFor="let item of namesArr" [selectable]="selectable" [removable]="removable" (removed)="remove(item)">
+      {{item}}
+      <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+    </mat-chip>
+    <input placeholder="New fruit..." [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+      [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)">
+  </mat-chip-list>
+</mat-form-field>
