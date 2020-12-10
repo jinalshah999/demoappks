@@ -44,3 +44,24 @@
       [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)">
   </mat-chip-list>
 </mat-form-field>
+
+<mat-form-field class="example-chip-list">
+  <mat-label>Favorite Name</mat-label>
+  <mat-chip-list #chipListAC>
+    <mat-chip *ngFor="let item of matchipArray" [selectable]="selectable" [removable]="removable"
+      (removed)="remove1(item)">
+      {{item}}
+      <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+    </mat-chip>
+    <input (keyup)="onSearch1(nameInput.value)" placeholder="New Name..." #nameInput [matAutocomplete]="auto1"
+      [matChipInputFor]="chipListAC" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+      (matChipInputTokenEnd)="add1($event)">
+  </mat-chip-list>
+  <mat-autocomplete #auto1="matAutocomplete" (optionSelected)="selected($event)">
+    <mat-option *ngFor="let name of fillteredArray" [value]="name">
+      {{name}}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+
+<button mat-button (click)="openDialog()">Open dialog</button>

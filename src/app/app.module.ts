@@ -21,13 +21,15 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatChipsModule } from '@angular/material/chips';
-
+import { PopupdemoComponent } from './popupdemo/popupdemo.component';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
     AngularmaterialdemoComponent,
     DemoformComponent,
     MainmenuComponent,
+    PopupdemoComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +49,7 @@ import { MatChipsModule } from '@angular/material/chips';
     MatSidenavModule,
     MatListModule,
     MatChipsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
