@@ -1,2 +1,5 @@
 <h1>Hello hu popup component chu.</h1>
 <button mat-button mat-dialog-close>Close</button>
+<button mat-button (click)="onClose()">Close with code</button>
+<input #input1 [value]="data">
+<button [mat-dialog-close]="input1.value">Click Me</button>

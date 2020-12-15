@@ -99,6 +99,12 @@ export class AngularmaterialdemoComponent implements OnInit {
   }
 
   openDialog() {
-    this.dialog.open(PopupdemoComponent);
+    const abc = this.dialog.open(PopupdemoComponent, {
+      data: this.namesArr[0],
+    });
+
+    abc.afterClosed().subscribe((x) => {
+      console.log(x);
+    });
   }
 }
