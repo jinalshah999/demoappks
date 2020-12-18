@@ -23,6 +23,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatChipsModule } from '@angular/material/chips';
 import { PopupdemoComponent } from './popupdemo/popupdemo.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { AccordiandemoComponent } from './accordiandemo/accordiandemo.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +32,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     DemoformComponent,
     MainmenuComponent,
     PopupdemoComponent,
+    AccordiandemoComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +53,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatListModule,
     MatChipsModule,
     MatDialogModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
