@@ -25,6 +25,9 @@ import { PopupdemoComponent } from './popupdemo/popupdemo.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { AccordiandemoComponent } from './accordiandemo/accordiandemo.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { SnackbardemocmpComponent } from './accordiandemo/snackbardemocmp/snackbardemocmp.component';
+import { DemofrmcmpComponent } from './demofrmcmp/demofrmcmp.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +36,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MainmenuComponent,
     PopupdemoComponent,
     AccordiandemoComponent,
+    SnackbardemocmpComponent,
+    DemofrmcmpComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +59,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatChipsModule,
     MatDialogModule,
     MatExpansionModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

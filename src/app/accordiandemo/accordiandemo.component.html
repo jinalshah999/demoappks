@@ -81,3 +81,9 @@
 
   </mat-expansion-panel>
 </mat-accordion>
+
+<hr>
+<input #message>
+<button (click)="OnClick(message.value)">Click Me</button>
+
+<button (click)="onToastClick()">Toast Message</button>
